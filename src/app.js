@@ -51,6 +51,19 @@ function displayRandomCard() {
     cardSuitTop.style.color = "black";
     cardSuitBottom.style.color = "black";
   }
+
+  const cardWidth = document.getElementById("cardWidth").value;
+  const cardHeight = document.getElementById("cardHeight").value;
+
+  if (cardWidth) {
+    document.getElementById("randomCard").style.width = `${cardWidth}px`;
+  }
+
+  if (cardHeight) {
+    document.getElementById("randomCard").style.height = `${cardHeight}px`;
+  }
 }
+
+document.getElementById("newCardButton").addEventListener("click", displayRandomCard);
 
 window.onload = displayRandomCard;
